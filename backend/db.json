@@ -6,5 +6,12 @@
       "password": "test"
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "id": "74a96b9f-5ea1-4e13-8f3a-551ab2d29735",
+      "title": "Finir le task manager",
+      "description": "Suivre la roadmap dans le README pour connaître les étapes à faire.",
+      "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+    }
+  ]
 }

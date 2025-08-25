@@ -21,6 +21,13 @@ export class DatabaseService {
     });
   }
 
+  findMany(table: string, query: any) {
+    const db = this.readDB();
+    return db[table].filter((item: any) => {
+      return Object.keys(query).every(key => item[key] === query[key]);
+    });
+  }
+
   findAll(table: string) {
     const db = this.readDB();
     return db[table];

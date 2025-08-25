@@ -3,8 +3,9 @@ import { DatabaseService } from '../database/database.service';
 import { v4 as uuid } from 'uuid';
 
 type UserSchema = {
-  username: String,
-  password: String
+  id: string;
+  username: string;
+  password: string;
 }
 
 @Injectable()
@@ -15,15 +16,19 @@ export class UsersService {
     return this.db.findAll('users');
   }
 
-  findOne(username: string) {
+  findById(id: string) {
+    return this.db.findOne('users', { id });
+  }
+
+  findByUsername(username: string) {
     return this.db.findOne('users', { username });
   }
 
   create(user: any) {
     try {
-      const newUser: UserSchema = user;
+      const newUser: UserSchema = { id: uuid(), ...user };
 
-      return this.db.create('users', { id: uuid(), ...newUser });
+      return this.db.create('users', newUser);
     } catch (error) {
       throw new Error('Error creating user');
     }
