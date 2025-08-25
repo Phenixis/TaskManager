@@ -6,11 +6,11 @@ A simple task manager I built with NestJS, Angular and Playwright to learn them
 
 ### 1. Backend - NestJS
 
-- [ ] Setup projet
-- [ ] Créer service de persistance JSON
-- [ ] Module USERS
+- [x] Setup projet
+- [x] Créer service de persistance JSON
+- [x] Module USERS
 - [ ] Module TASKS
-- [ ] Module AUTH
+- [x] Module AUTH
 - [ ] Logger
 - [ ] Middleware
 
