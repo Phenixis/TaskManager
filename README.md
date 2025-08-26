@@ -11,12 +11,12 @@ A simple task manager I built with NestJS, Angular and Playwright to learn them
 - [x] Module USERS
 - [x] Module TASKS
 - [x] Module AUTH
-- [ ] Logger
-- [ ] Middleware
+- [x] Logger
+- [x] Middleware
 
 ### 2. Frontend - Angular
 
-- [ ] Setup projet
+- [x] Setup projet
 - [ ] Auth
 - [ ] Dashboard
 - [ ] Kanban
