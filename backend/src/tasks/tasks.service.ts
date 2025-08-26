@@ -10,6 +10,8 @@ type TaskSchema = {
     title: string;
     description: string;
     userId: string;
+    status: "todo" | "doing" | "done";
+    priority: "extremely low" | "low" | "medium" | "high" | "extremely high";
 };
 
 @Injectable()

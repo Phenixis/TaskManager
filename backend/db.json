@@ -13,5 +13,68 @@
       "description": "Suivre la roadmap dans le README pour connaître les étapes à faire.",
       "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
     }
+  ],
+  "logs": [
+    {
+      "id": "685dd2a3-a0af-42cd-be74-4613c58931e1",
+      "timestamp": "2025-08-26T07:25:31.259Z",
+      "method": "GET",
+      "url": "/tasks",
+      "statusCode": 200,
+      "duration": 4,
+      "requestBody": {
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "781d868a-8bc0-42d8-be8e-ab7b0e37ae63",
+      "timestamp": "2025-08-26T07:25:31.333Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 2,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "7dd0bd70-80e7-4348-bf77-db09fe0f5195",
+      "timestamp": "2025-08-26T07:25:31.426Z",
+      "method": "GET",
+      "url": "/tasks/Test%20task",
+      "statusCode": 200,
+      "duration": 1,
+      "requestBody": {
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "77351fb1-f1de-4bc7-8605-ba0f47cd4bf4",
+      "timestamp": "2025-08-26T07:25:31.505Z",
+      "method": "PUT",
+      "url": "/tasks/Test%20task",
+      "statusCode": 200,
+      "duration": 1,
+      "requestBody": {
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3",
+        "data": {
+          "title": "Test task 2",
+          "description": "This is the second version of a mock task for testing purpose."
+        }
+      }
+    },
+    {
+      "id": "d83e4ecd-e9fd-4ce4-bf90-8fd1e1fc2c90",
+      "timestamp": "2025-08-26T07:25:31.602Z",
+      "method": "DELETE",
+      "url": "/tasks/Test%20task%202",
+      "statusCode": 200,
+      "duration": 2,
+      "requestBody": {
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    }
   ]
 }
