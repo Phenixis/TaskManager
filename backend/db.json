@@ -3,7 +3,12 @@
     {
       "id": "84b34278-f68b-46c5-840f-9232f5ec53b3",
       "username": "Maxime",
-      "password": "test"
+      "password": "$2y$10$Nmq6F/AUBlv3LjvaVfaOJuYe3C6BQWI1IIbT5xfjt14uEWeg2LK2C"
+    },
+    {
+      "id": "90710296-0a55-47af-8615-3c6b89c6bc5d",
+      "username": "Test",
+      "password": "$2b$10$msHTK09vgS9OrFoD..oUnu9RS6h.SfO45ot45GJZnfzP93o5HI6Cy"
     }
   ],
   "tasks": [
@@ -75,6 +80,551 @@
       "requestBody": {
         "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
       }
+    },
+    {
+      "id": "b4dd7bea-a720-4caa-9961-269c5dbf9d2c",
+      "timestamp": "2025-08-27T07:08:00.701Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 4,
+      "requestBody": {
+        "username": "Maxime",
+        "password": "Test"
+      }
+    },
+    {
+      "id": "9deb35ce-d778-4645-9855-653ebd64c831",
+      "timestamp": "2025-08-27T07:08:24.611Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {
+        "username": "Maxime",
+        "password": "TEstFaux"
+      }
+    },
+    {
+      "id": "8fa3fd8a-6c14-4fc6-ba63-15644efb3ffb",
+      "timestamp": "2025-08-27T07:09:36.804Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {
+        "username": "Maxime",
+        "password": "test"
+      }
+    },
+    {
+      "id": "6f9b60e7-4def-49c8-8ab4-c1a7ec3137a0",
+      "timestamp": "2025-08-27T07:09:52.788Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {
+        "username": "Maxime",
+        "password": "test"
+      }
+    },
+    {
+      "id": "bff424f8-ac45-47b9-aa56-f6565d72232f",
+      "timestamp": "2025-08-27T07:10:01.244Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {
+        "username": "Maxime",
+        "password": "test"
+      }
+    },
+    {
+      "id": "ca793360-57b5-4ccd-8256-b0f36cb6500a",
+      "timestamp": "2025-08-27T07:10:10.259Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {
+        "username": "maxime",
+        "password": "test"
+      }
+    },
+    {
+      "id": "312a8f13-18fe-4b88-a370-1373b3c1b994",
+      "timestamp": "2025-08-27T07:11:01.585Z",
+      "method": "POST",
+      "url": "/auth/register",
+      "statusCode": 201,
+      "duration": 53,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "bc4e170e-28d3-4e2e-a97b-87102d1e1cd1",
+      "timestamp": "2025-08-27T07:11:15.124Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 57,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "5f3ddbb4-4f82-498d-a42a-cefc0b3eadc2",
+      "timestamp": "2025-08-27T07:11:45.139Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 53,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "1fe15000-92b6-4d27-9e0a-96f9952a6ce6",
+      "timestamp": "2025-08-27T07:28:44.975Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 4,
+      "requestBody": {
+        "email": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "4d9e3f0c-ad06-4b23-9817-f8bf68279215",
+      "timestamp": "2025-08-27T07:30:23.746Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 4,
+      "requestBody": {
+        "email": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "7e50c829-0e12-4d8c-8e0e-383cbdaae7ff",
+      "timestamp": "2025-08-27T07:31:12.042Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 4,
+      "requestBody": {
+        "email": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "a1467a6a-051d-4620-86ea-6227bc403d11",
+      "timestamp": "2025-08-27T07:31:17.455Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {
+        "email": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "d001adb6-931d-4f50-80f3-6531ea975957",
+      "timestamp": "2025-08-27T07:31:47.706Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 4,
+      "requestBody": {
+        "email": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "c6937aab-2fc3-4937-ab8d-f3279c8991de",
+      "timestamp": "2025-08-27T07:31:56.689Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 3,
+      "requestBody": {
+        "email": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "dff56bdd-b0ac-42f2-8e0a-0cda28afa364",
+      "timestamp": "2025-08-27T07:32:28.407Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 54,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "710386e6-57c2-42b6-8051-bc63264b9826",
+      "timestamp": "2025-08-27T07:42:14.838Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 7
+    },
+    {
+      "id": "a80c8b9c-968a-444d-af78-c86aa76dbd57",
+      "timestamp": "2025-08-27T07:42:36.225Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "bfa537e0-681c-4938-abf7-83c60215bba2",
+      "timestamp": "2025-08-27T07:42:36.388Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "37c556f6-bf27-4646-81b6-bcb86b0e5237",
+      "timestamp": "2025-08-27T07:42:46.979Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 54,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "9c40f53c-7411-4b79-9e9b-f48f92d43078",
+      "timestamp": "2025-08-27T07:42:49.316Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "d6dfaf6c-11d0-46d3-9458-876e36fb44c4",
+      "timestamp": "2025-08-27T07:43:23.323Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 53,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "14582358-b731-4ae2-9585-2c77ae5bff9a",
+      "timestamp": "2025-08-27T07:43:24.062Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "eb7d6633-d905-4944-8a96-576b7a377d99",
+      "timestamp": "2025-08-27T07:43:24.064Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {}
+    },
+    {
+      "id": "643f91a7-d494-4c56-91ac-4055d21b40c5",
+      "timestamp": "2025-08-27T07:44:03.779Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 4,
+      "requestBody": {
+        "username": "TEst",
+        "password": "test"
+      }
+    },
+    {
+      "id": "4b23cdc9-4b3a-43a5-8671-e3574bacc890",
+      "timestamp": "2025-08-27T07:44:05.981Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {
+        "username": "TEst",
+        "password": "test"
+      }
+    },
+    {
+      "id": "d0eedd69-c193-4a6b-8cb1-23d8faf500f0",
+      "timestamp": "2025-08-27T07:45:19.245Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "312035cb-d4f9-4290-8ddc-d36298bf47fc",
+      "timestamp": "2025-08-27T07:45:19.247Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "f5795954-b847-4d77-88fa-5611def59c92",
+      "timestamp": "2025-08-27T07:45:24.081Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 52,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "95cdcb96-90f5-4f10-8553-3ff41fea56ce",
+      "timestamp": "2025-08-27T07:46:31.228Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "5c88435a-35da-4f83-93c6-8df4ffe2c54a",
+      "timestamp": "2025-08-27T07:46:31.230Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {}
+    },
+    {
+      "id": "d652194e-d681-4938-b6d2-92d566359fd4",
+      "timestamp": "2025-08-27T07:46:39.713Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 51,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "5c283588-fea5-41d5-877a-b1b925d7a0cd",
+      "timestamp": "2025-08-27T07:48:02.686Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {}
+    },
+    {
+      "id": "52898c98-d59d-440e-8850-68228d84c579",
+      "timestamp": "2025-08-27T07:48:02.688Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "d948bef5-3ba2-49bb-8430-315a39ec58aa",
+      "timestamp": "2025-08-27T07:48:08.868Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 52,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "05b6862d-4406-4345-aa91-76a66060ac39",
+      "timestamp": "2025-08-27T07:52:11.001Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "78973ed6-3785-46c4-8741-a68dae670654",
+      "timestamp": "2025-08-27T07:52:11.004Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 1,
+      "requestBody": {}
+    },
+    {
+      "id": "c6b31b41-c1ae-42f8-9a12-9f615aa44624",
+      "timestamp": "2025-08-27T07:52:15.724Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 50,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "c4b0fba6-bc31-4f4a-97d1-9c6ac07fd2dd",
+      "timestamp": "2025-08-27T07:54:10.669Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 50,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "2453bc8a-5ef0-4ef2-ba5e-b3ce9f8a0812",
+      "timestamp": "2025-08-27T07:54:15.729Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 53,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "37e23edb-9cf1-43ff-aed2-ec06d106fa03",
+      "timestamp": "2025-08-27T07:54:17.961Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {}
+    },
+    {
+      "id": "f2ceb89e-bb6e-4c5c-aedc-b7eb05d502af",
+      "timestamp": "2025-08-27T07:54:17.963Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {}
+    },
+    {
+      "id": "ef086f1e-a735-4aab-92fe-d813bbead84b",
+      "timestamp": "2025-08-27T07:54:23.468Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 50,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "806e8f12-71f8-4052-b400-aafa939566f2",
+      "timestamp": "2025-08-27T07:55:08.831Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {
+        "username": "Maxime",
+        "password": "test"
+      }
+    },
+    {
+      "id": "9fc7ed67-8a5c-434a-a0f0-006b05df5511",
+      "timestamp": "2025-08-27T07:56:17.693Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 51,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "04f638f8-8942-4fd3-ba0c-116eb6c0c3db",
+      "timestamp": "2025-08-27T07:58:15.796Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 51,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "16354fda-3607-4025-b941-956559145598",
+      "timestamp": "2025-08-27T07:59:14.516Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 50,
+      "requestBody": {
+        "username": "Test",
+        "password": "12345"
+      }
+    },
+    {
+      "id": "31695726-5a65-44a1-b384-ab3bec223e1b",
+      "timestamp": "2025-08-27T07:59:16.781Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 53,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "0feb4fa1-6424-4d94-ac66-17535d347db2",
+      "timestamp": "2025-08-27T07:59:20.513Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {}
+    },
+    {
+      "id": "3d13af19-8bed-4f4d-b6e2-3c7803718a7b",
+      "timestamp": "2025-08-27T07:59:20.515Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0,
+      "requestBody": {}
     }
   ]
 }

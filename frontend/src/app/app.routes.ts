@@ -3,11 +3,13 @@ import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { MainLayout } from './layout/main-layout';
+import { Logout } from './pages/logout/logout';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: Login },
     { path: 'register', component: Register },
+    { path: 'logout', component: Logout },
     {
         path: '',
         component: MainLayout,

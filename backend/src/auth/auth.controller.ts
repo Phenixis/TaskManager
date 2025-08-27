@@ -7,7 +7,7 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('register')
-  async register(@Body() body: { username: string; password: string }) {
+  async register(@Body() body: { username: string; email: string; password: string }) {
     return this.authService.register(body.username, body.password);
   }
 
@@ -18,6 +18,11 @@ export class AuthController {
       return { error: 'Invalid credentials' };
     }
     return this.authService.login(user);
+  }
+
+  @Post('logout')
+  async logout(@Request() req) {
+    return true;
   }
 
   // Exemple d'endpoint protégé

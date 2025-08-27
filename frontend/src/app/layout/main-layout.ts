@@ -17,7 +17,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
       <div class="content">
         <header class="topbar">
           <div class="spacer"></div>
-          <a routerLink="/login" class="logout">Logout</a>
+          <a routerLink="/logout" class="logout">Logout</a>
         </header>
         <main class="main">
           <router-outlet />
