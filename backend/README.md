@@ -1,98 +1,170 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## API endpoints
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### /users
 
-## Description
+User Object = {
+id: string;
+username: string;
+email: string;
+password: string;
+}
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Username must match `/^[a-zA-Z0-9_\.-]{3,16}$/`, which can be described as a valid username containing 3 to 16 alphanumeric characters, underscores, dots, or hyphens.
 
-## Project setup
+Email must match `/^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/`, which can be described as a valid email address.
 
-```bash
-$ pnpm install
-```
+Password must match `/(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,24}$/`, which can be described as a strong password containing at least 8 characters, including at least 1 uppercase, 1 lowercase, 1 numeric, and 1 special characters without space.
 
-## Compile and run the project
+#### GET /users
 
-```bash
-# development
-$ pnpm run start
+- Description: Retrieve a list of users
+- Responses:
+  - 200 OK / Array of user objects, without passwords.
+  - 404 Not Found / No users found
 
-# watch mode
-$ pnpm run start:dev
+#### POST /users
 
-# production mode
-$ pnpm run start:prod
-```
+- Description: Create a new user
+- Request Body: {
+  username: string,
+  email: string,
+  password: string
+  }
+- Responses:
+  - 200 OK / Created user object, with id and without password
+  - 400 Bad Request / Validation errors, with explicit error message
+    - Invalid username format
+    - Invalid email format
+    - Invalid password format
+  - 409 Conflict / User already exists
+    - Username already exists
+    - Email already exists
 
-## Run tests
+#### GET /users/:username
 
-```bash
-# unit tests
-$ pnpm run test
+- Description: Retrieve a specific user by username
+- Responses:
+  - 200 OK / User object, without password
+  - 404 Not Found / User not found
 
-# e2e tests
-$ pnpm run test:e2e
+#### PUT /users/:username
 
-# test coverage
-$ pnpm run test:cov
-```
+- Description: Update a specific user by username
+- Request Body: {
+  username?: string,
+  email?: string,
+  password?: string
+  }
+- Responses:
+  - 200 OK / Updated user object, without password
+  - 404 Not Found / User not found
+  - 400 Bad Request / Validation errors, with explicit error message
+    - Invalid username format
+    - Invalid email format
+    - Invalid password format
+  - 409 Conflict / User already exists
+    - Username already exists
+    - Email already exists
 
-## Deployment
+#### DELETE /users/:username
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+- Description: Delete a specific user by username
+- Responses:
+  - 200 OK / Success message
+  - 404 Not Found / User not found
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### /tasks
 
-```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
-```
+Task Object = {
+id: string;
+title: string;
+description: string;
+userId: string;
+status: "pending" | "in-progress" | "completed";
+priority: "extremely low" | "low" | "medium" | "high" | "extremely high";
+}
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+id format : <userId>-<taskIndex>
+Title must be less than 101 characters long
+Description must be less than 501 characters long
+userId must be a valid ID of an existing user
 
-## Resources
+#### GET /tasks
 
-Check out a few resources that may come in handy when working with NestJS:
+- Description: Retrieve a list of tasks
+- Request Body: {
+  userId: string
+}
+- Responses:
+  - 200 OK / Array of task objects
+  - 404 Not Found / No tasks found
+  - 404 Not Found / User not found
+  - 400 Bad Request / Invalid userId format
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+#### POST /tasks
 
-## Support
+- Description: Create a new task
+- Request Body: {
+  title: string,
+  description: string,
+  userId: string,
+  status: "pending" | "in-progress" | "completed",
+  priority: "extremely low" | "low" | "medium" | "high" | "extremely high"
+  }
+- Responses:
+  - 201 Created / Created task object
+  - 404 Not Found / User not found
+  - 400 Bad Request / Validation errors, with explicit error message
+    - Invalid title format
+    - Invalid description format
+    - Invalid userId format
+    - Invalid status format
+    - Invalid priority format
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+#### GET /tasks/:id
 
-## Stay in touch
+- Description: Retrieve a specific task by ID
+- Request Body: {
+  userId: string
+}
+- Responses:
+  - 200 OK / Task object
+  - 404 Not Found / User not found
+  - 404 Not Found / Task not found
+  - 400 Bad Request / Invalid id format
+  - 400 Bad Request / Invalid userId format
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+#### PUT /tasks/:id
 
-## License
+- Description: Update a specific task by ID
+- Request Body: {
+  id: string,
+  userId: string,
+  title?: string,
+  description?: string,
+  status?: "pending" | "in-progress" | "completed",
+  priority?: "extremely low" | "low" | "medium" | "high" | "extremely high"
+  }
+- Responses:
+  - 200 OK / Updated task object
+  - 404 Not Found / User not found
+  - 404 Not Found / Task not found
+  - 400 Bad Request / Validation errors, with explicit error message
+    - Invalid id format
+    - Invalid title format
+    - Invalid description format
+    - Invalid userId format
+    - Invalid status format
+    - Invalid priority format
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+#### DELETE /tasks/:id
+
+- Description: Delete a specific task by ID
+- Responses:
+  - 200 OK / Success message
+  - 404 Not Found / User not found
+  - 404 Not Found / Task not found
+  - 400 Bad Request / Invalid id format
+  - 400 Bad Request / Invalid userId format

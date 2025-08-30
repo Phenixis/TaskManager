@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { DatabaseService } from 'src/database/database.service';
-import { v4 as uuid } from 'uuid';
 
 const TABLE_NAME = 'tasks';
 
@@ -25,15 +24,24 @@ export class TasksService {
         return this.databaseService.findMany(TABLE_NAME, { userId });
     }
 
-    findOne(userId: string, title: string) {
-        return this.databaseService.findOne(TABLE_NAME, { userId, title });
+    findOne(userId: string, id: string) {
+        return this.databaseService.findOne(TABLE_NAME, { userId, id });
+    }
+
+    getCount(userId: string) {
+        console.log("Getting count for userId:", userId);
+        const tasks = this.findAll(userId);
+
+        console.log(tasks)
+
+        return tasks.length;
     }
 
     create(data: any) {
         const user = this.usersService.findById(data.userId);
         if (!user) return null;
         try {
-            const newData: TaskSchema = { id: uuid(), ...data };
+            const newData: TaskSchema = { id: user.username + "-" + this.getCount(data.userId), ...data };
 
             return this.databaseService.create(TABLE_NAME, newData);
         } catch (error) {
@@ -41,19 +49,19 @@ export class TasksService {
         }
     }
 
-    update(userId: string, title: string, updates: any) {
+    update(userId: string, id: string, updates: any) {
         const user = this.usersService.findById(userId);
         if (!user) return null;
-        const task = this.findOne(userId, title);
+        const task = this.findOne(userId, id);
         if (!task) return null;
 
         return this.databaseService.update(TABLE_NAME, task.id, updates);
     }
 
-    remove(userId: string, title: string) {
+    remove(userId: string, id: string) {
         const user = this.usersService.findById(userId);
         if (!user) return null;
-        const task = this.findOne(userId, title);
+        const task = this.findOne(userId, id);
         if (!task) return null;
 
         return this.databaseService.remove(TABLE_NAME, task.id);

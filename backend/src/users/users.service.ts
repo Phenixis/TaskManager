@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 type UserSchema = {
   id: string;
   username: string;
+  email: string;
   password: string;
 }
 
@@ -22,6 +23,10 @@ export class UsersService {
 
   findByUsername(username: string) {
     return this.db.findOne('users', { username });
+  }
+
+  findByEmail(email: string) {
+    return this.db.findOne('users', { email });
   }
 
   create(user: any) {

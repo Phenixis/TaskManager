@@ -10,11 +10,11 @@ import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angula
     <div class="auth-wrapper">
       <h1>Create account</h1>
       <form [formGroup]="form" (ngSubmit)="onSubmit()" class="card">
-        <label>Full name</label>
-        <input type="text" formControlName="name" placeholder="Jane Doe" />
+        <label>Username</label>
+        <input type="text" formControlName="name" placeholder="JohnDoe" />
 
         <label>Email</label>
-        <input type="email" formControlName="email" placeholder="you@example.com" />
+        <input type="email" formControlName="email" placeholder="johndoe@example.com" />
 
         <label>Password</label>
         <input type="password" formControlName="password" placeholder="••••••••" />

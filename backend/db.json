@@ -3,17 +3,13 @@
     {
       "id": "84b34278-f68b-46c5-840f-9232f5ec53b3",
       "username": "Maxime",
+      "email": "max@maximeduhamel.com",
       "password": "$2y$10$Nmq6F/AUBlv3LjvaVfaOJuYe3C6BQWI1IIbT5xfjt14uEWeg2LK2C"
-    },
-    {
-      "id": "90710296-0a55-47af-8615-3c6b89c6bc5d",
-      "username": "Test",
-      "password": "$2b$10$msHTK09vgS9OrFoD..oUnu9RS6h.SfO45ot45GJZnfzP93o5HI6Cy"
     }
   ],
   "tasks": [
     {
-      "id": "74a96b9f-5ea1-4e13-8f3a-551ab2d29735",
+      "id": "Maxime-0",
       "title": "Finir le task manager",
       "description": "Suivre la roadmap dans le README pour connaître les étapes à faire.",
       "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
@@ -625,6 +621,181 @@
       "statusCode": 201,
       "duration": 0,
       "requestBody": {}
+    },
+    {
+      "id": "2938a3c8-4c8e-424f-a405-bd058a977232",
+      "timestamp": "2025-08-27T08:00:30.359Z",
+      "method": "POST",
+      "url": "/auth/login",
+      "statusCode": 201,
+      "duration": 51,
+      "requestBody": {
+        "username": "Test",
+        "password": "1234"
+      }
+    },
+    {
+      "id": "346dab98-e76f-4863-b80a-6e67c8644c10",
+      "timestamp": "2025-08-27T08:00:33.643Z",
+      "method": "POST",
+      "url": "/auth/profile",
+      "statusCode": 401,
+      "duration": 3
+    },
+    {
+      "id": "7d3a580d-e37f-4ed6-93ba-e692f5a87ef4",
+      "timestamp": "2025-08-27T08:00:36.272Z",
+      "method": "POST",
+      "url": "/auth/logout",
+      "statusCode": 201,
+      "duration": 0
+    },
+    {
+      "id": "349cbc24-45c6-4099-9680-5ba0c197ceb2",
+      "timestamp": "2025-08-27T08:00:44.824Z",
+      "method": "DELETE",
+      "url": "/users/Test",
+      "statusCode": 200,
+      "duration": 2
+    },
+    {
+      "id": "ee0ec67c-2fa7-4bbc-9bdc-7f06f0176645",
+      "timestamp": "2025-08-27T09:49:17.413Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 6,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "3a108a59-b9c6-499d-9837-103b9b403072",
+      "timestamp": "2025-08-27T09:49:27.010Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 3,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "ef0d61bd-c333-400a-808e-3b8a42bc3c96",
+      "timestamp": "2025-08-27T09:50:27.892Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 6,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "3717413b-7e3d-41f4-8d4a-511b7112642e",
+      "timestamp": "2025-08-27T09:50:30.234Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 2,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "f5b305e2-1377-4812-81cb-76d8fab75491",
+      "timestamp": "2025-08-27T09:50:44.648Z",
+      "method": "GET",
+      "url": "/tasks",
+      "statusCode": 200,
+      "duration": 1,
+      "requestBody": {
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "2ebeda5c-4d17-4dc0-a8c9-6e205100276e",
+      "timestamp": "2025-08-27T09:51:07.810Z",
+      "method": "GET",
+      "url": "/tasks",
+      "statusCode": 200,
+      "duration": 2,
+      "requestBody": {
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "46c256a5-edc3-4ea6-8397-0b640aebe81a",
+      "timestamp": "2025-08-27T09:51:43.148Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 5,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "b63201b0-6358-4902-9c82-490f659685e2",
+      "timestamp": "2025-08-27T09:52:07.844Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 5,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "72104376-2ed2-4ea7-8584-fc63e522ae16",
+      "timestamp": "2025-08-27T09:52:30.180Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 7,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "d8a94342-7738-4993-9609-650a5c06849a",
+      "timestamp": "2025-08-27T09:52:39.367Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 2,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
+    },
+    {
+      "id": "c72c9375-f76a-4002-8599-7433b0319bad",
+      "timestamp": "2025-08-27T09:52:40.783Z",
+      "method": "POST",
+      "url": "/tasks",
+      "statusCode": 201,
+      "duration": 3,
+      "requestBody": {
+        "title": "Test task",
+        "description": "This is a mock task for testing purpose.",
+        "userId": "84b34278-f68b-46c5-840f-9232f5ec53b3"
+      }
     }
   ]
 }
